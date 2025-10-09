@@ -84,15 +84,13 @@
 #![cfg_attr(feature = "lint", warn(unsafe_op_in_unsafe_fn))]
 #![cfg_attr(not(test), no_std)]
 #![cfg_attr(docsrs, feature(doc_cfg))]
-#![cfg_attr(docsrs, feature(doc_auto_cfg))]
 #![allow(unused_unsafe)]
 #![deny(
     clippy::doc_markdown,
     clippy::unnecessary_safety_comment,
     clippy::semicolon_if_nothing_returned,
     clippy::unwrap_used,
-    clippy::as_underscore,
-    clippy::doc_markdown
+    clippy::as_underscore
 )]
 #![allow(non_camel_case_types)]
 
