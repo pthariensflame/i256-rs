@@ -12,6 +12,7 @@ pub(crate) mod constants;
 pub(crate) mod docs;
 pub(crate) mod endian;
 pub(crate) mod extensions;
+pub(crate) mod iter_traits_impls;
 pub(crate) mod limb;
 pub(crate) mod num_traits_impls;
 pub(crate) mod ops;

@@ -140,6 +140,10 @@ macro_rules! define {
             }
         }
 
+        $crate::shared::iter_traits_impls::define! {
+            type => $t,
+        }
+
         #[cfg(feature = "num-traits")]
         impl ::num_traits::Signed for $t {
             #[inline(always)]
