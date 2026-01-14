@@ -207,6 +207,16 @@ mod u256_tests {
     }
 
     #[test]
+    fn sum_test() {
+        assert_eq!(u256::from_u8(42), [u256::from_u8(40), u256::from_u8(2)].into_iter().sum());
+    }
+
+    #[test]
+    fn product_test() {
+        assert_eq!(u256::from_u8(42), [u256::from_u8(6), u256::from_u8(7)].into_iter().product());
+    }
+
+    #[test]
     fn endian_tests() {
         let data = [0x123456u64, 0x789abcu64, 0xdef012u64, 0x345678u64];
         let int = u256::from_le_u64(data);
@@ -471,5 +481,16 @@ mod i256_tests {
     #[should_panic]
     fn from_str_radix_neg_test() {
         _ = i256::from_str_radix("-1F", 10).unwrap();
+    }
+
+    #[test]
+    fn sum_test() {
+        assert_eq!(i256::from_i8(42), [i256::from_i8(40), i256::from_i8(2)].into_iter().sum());
+        assert_eq!(i256::from_i8(-42), [i256::from_i8(-40), i256::from_i8(-2)].into_iter().sum());
+    }
+
+    #[test]
+    fn product_test() {
+        assert_eq!(i256::from_i8(-42), [i256::from_i8(6), i256::from_i8(-7)].into_iter().product());
     }
 }
